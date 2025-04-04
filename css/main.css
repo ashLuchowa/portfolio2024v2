@@ -113,6 +113,22 @@ header .header-title a {
   font-weight: 100;
   margin-top: 20px;
 }
+header .header-social {
+  z-index: 1000;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+header .header-social a {
+  text-decoration: none;
+  color: #0D0D0C;
+  font-size: 20px;
+  font-weight: 100;
+  margin-left: 15px;
+}
+header .header-social a:first-child {
+  margin-left: 0;
+}
 
 section {
   position: relative;
