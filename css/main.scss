@@ -17,6 +17,7 @@ body {
 
 // HEADER
 header {
+    padding: 20px;
     height: 100vh;
     #header-logo {
         position: fixed;
@@ -31,7 +32,6 @@ header {
             font-weight: 100;
         }
     }
-
     nav {
         z-index: 1000;
         display: flex;
@@ -47,6 +47,25 @@ header {
             font-size: 25px;
             line-height: 25px;
             font-weight: 100;
+        }
+    }
+    .header-title {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        align-items: start;
+        h1 {
+            font-size: 9em;
+            color: $primary-color;
+            font-weight: 100;
+            width: 1000px;
+        }
+        a {
+            font-size: 2em;
+            color: $primary-color;
+            font-weight: 100;
+            margin-top: 20px;
         }
     }
 }
