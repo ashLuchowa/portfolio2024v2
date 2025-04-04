@@ -454,4 +454,15 @@ header .hidden {
     font-size: 20px;
     font-weight: 100;
   }
+}
+@media (max-width: 400px) {
+  .main-about {
+    height: auto;
+  }
+  .main-contact {
+    height: 100vh;
+  }
+  .main-contact .contact-info .contact-email a {
+    font-size: 25px;
+  }
 }/*# sourceMappingURL=main.css.map */

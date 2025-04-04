@@ -510,3 +510,20 @@ header {
         }
     }
 }
+
+@media (max-width: 400px) {
+    .main-about {
+        height: auto;
+    }
+
+    .main-contact {
+        height: 100vh;
+        .contact-info {
+            .contact-email {
+                a {
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}

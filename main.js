@@ -75,3 +75,12 @@ const goToTop = () => {
 };
 
 topBtn.addEventListener('click', goToTop);
+
+// HAMBURGER MENU
+const button = document.querySelector('.hamburger-content');
+const subNav = document.querySelector('.sub-nav');
+
+button.addEventListener('click', () => {
+    subNav.classList.toggle('active');
+    button.classList.toggle('active');
+});
