@@ -1,0 +1,114 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  /* font: inherit; */
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F2F2F2;
+  font-family: "helvetica";
+  font-weight: bold;
+}
+
+section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section .scroll {
+  position: absolute;
+  filter: blur(10px);
+  transition: filter 0.8s ease-in-out;
+}
+section .scroll .title {
+  display: flex;
+  flex-direction: column;
+}
+section .scroll .title .project-title {
+  font-size: 8em;
+  text-decoration: none;
+  color: #0D0D0C;
+  font-weight: 100;
+}
+section .scroll .title .sub {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+  padding: 0 0 0 15px;
+}
+section .scroll .title .sub .project-sub-title {
+  font-size: 2em;
+  text-decoration: none;
+  color: #252626;
+  font-weight: 100;
+}
+section .scroll .title .sub .project-view-code {
+  font-size: 1em;
+  text-decoration: none;
+  color: #252626;
+  border: 1px solid #A6A6A6;
+  border-radius: 5px;
+  padding: 10px;
+  text-transform: uppercase;
+}
+section .project-title img {
+  width: 1000px;
+  border-radius: 20px;
+}
+section .scroll-appear {
+  filter: blur(0px);
+}/*# sourceMappingURL=main.css.map */
