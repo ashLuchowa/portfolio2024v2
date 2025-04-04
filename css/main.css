@@ -68,6 +68,7 @@ header {
   padding: 20px;
   height: 100vh;
   position: relative;
+  /* sub nav */
   /* Back to top */
 }
 header .top-info {
@@ -118,7 +119,7 @@ header .top-info .header-social .resume {
   border-right: 1px solid #A6A6A6;
   padding: 5px 10px;
 }
-header .top-info .hamburger-content {
+header .top-info .hamburger-menu .hamburger-content {
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -126,7 +127,7 @@ header .top-info .hamburger-content {
   cursor: pointer;
   padding: 10px;
 }
-header .top-info .bar {
+header .top-info .hamburger-menu .bar {
   height: 3px;
   width: 20px;
   background-color: #0D0D0C;
@@ -134,16 +135,16 @@ header .top-info .bar {
   border-radius: 5px;
   transition: all 0.2s ease-in-out;
 }
-header .top-info .hamburger-content.active .bar:nth-child(1) {
+header .top-info .hamburger-menu .hamburger-content.active .bar:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
-header .top-info .hamburger-content.active .bar:nth-child(2) {
+header .top-info .hamburger-menu .hamburger-content.active .bar:nth-child(2) {
   opacity: 0;
 }
-header .top-info .hamburger-content.active .bar:nth-child(3) {
+header .top-info .hamburger-menu .hamburger-content.active .bar:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
 }
-header .top-info .bar:last-child {
+header .top-info .hamburger-menu .bar:last-child {
   margin-bottom: 0px;
 }
 header nav {
@@ -162,6 +163,34 @@ header nav .nav-link a {
   font-size: 30px;
   line-height: 25px;
   font-weight: 100;
+}
+header .sub-nav {
+  z-index: 100;
+  background-color: #F2F2F2;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+header .sub-nav.active {
+  right: 0px;
+  opacity: 1;
+}
+header .sub-nav ul li {
+  margin: 10px;
+}
+header .sub-nav ul li a {
+  color: #252626;
+  font-size: 50px;
+  font-weight: 100;
+  text-decoration: none;
 }
 header .header-title {
   display: flex;
@@ -198,7 +227,7 @@ header .back-top {
   border: 1px solid #252626;
   filter: 0;
   border-radius: 60px;
-  z-index: 3;
+  z-index: 1000;
   transition: all 0.3s ease;
   background-color: #252626;
   text-decoration: none;
@@ -400,11 +429,14 @@ header .hidden {
   header .top-info .header-social {
     display: none;
   }
-  header .top-info .hamburger-content {
+  header .top-info .hamburger-menu .hamburger-content {
     display: flex;
   }
   header nav {
     display: none;
+  }
+  header .sub-nav {
+    display: flex;
   }
   header .back-top {
     bottom: 20px;

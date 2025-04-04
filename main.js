@@ -84,3 +84,12 @@ button.addEventListener('click', () => {
     subNav.classList.toggle('active');
     button.classList.toggle('active');
 });
+
+const subLinks = document.querySelectorAll('.sub-nav ul li a');
+
+subLinks.forEach(item=> {
+    item.addEventListener('click', ()=> {
+        subNav.classList.remove('active');
+        button.classList.remove('active');
+    });
+})
