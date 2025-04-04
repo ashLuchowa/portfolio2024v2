@@ -19,17 +19,52 @@ body {
 header {
     padding: 20px;
     height: 100vh;
-    #header-logo {
-        position: fixed;
-        top: 20px;
-        left: 20px;
+    position: relative;
+    .top-info {
         z-index: 1000;
-        a {
-            text-decoration: none;
-            color: $primary-color;
-            font-size: 20px;
-            line-height: 25px;
-            font-weight: 100;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 20px 20px;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: 20px;
+        box-sizing: border-box;
+        .header-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a {
+                text-decoration: none;
+                font-size: 30px;
+                font-weight: 100;
+                color: $primary-light-color;
+            }
+        }
+        .square {
+            display: flex;
+            align-items: center;
+            .top-hr {
+                width: 100%;
+                height: 1px;
+                background-color: $secondary-light-color;
+            }
+        }
+        .header-social {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            a {
+                text-decoration: none;
+                font-size: 20px;
+                font-weight: 100;
+                color: $primary-light-color;
+            }
+            .resume {
+                border-right: 1px solid $secondary-light-color;
+                padding: 5px 10px;
+            }
         }
     }
     nav {
@@ -66,22 +101,9 @@ header {
             color: $primary-color;
             font-weight: 100;
             margin-top: 20px;
-        }
-    }
-    .header-social {
-        z-index: 1000;
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        a {
+            padding: 20px;
             text-decoration: none;
-            color: $primary-color;
-            font-size: 20px;
-            font-weight: 100;
-            margin-left: 15px;
-            &:first-child {
-                margin-left: 0;
-            }
+            border-bottom: 2px solid $primary-light-color;
         }
     }
 }
