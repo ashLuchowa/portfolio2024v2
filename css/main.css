@@ -205,20 +205,19 @@ header .header-title a {
   filter: blur(0px);
 }
 
-.main-skills {
+.main-about {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  align-items: start;
-  background-color: #A6A6A6;
+  height: 80vh;
+  align-items: center;
 }
-.main-skills h2 {
+.main-about h2 {
   font-size: 60px;
   color: #0D0D0C;
   font-weight: 100;
 }
-.main-skills .scroll-other {
+.main-about .scroll-other {
   filter: blur(10px);
   display: flex;
   flex-direction: column;
@@ -226,14 +225,16 @@ header .header-title a {
   align-items: center;
   transition: filter 0.7s ease-out;
 }
-.main-skills .scroll-other p {
+.main-about .scroll-other p {
   width: 50vw;
-  text-align: center;
-  font-size: 30px;
+  text-align: start;
+  font-size: 25px;
   line-height: 35px;
   font-weight: 300;
+  color: #252626;
+  margin-top: 20px;
 }
-.main-skills .scroll-other .more-about-btn {
+.main-about .scroll-other .more-about-btn {
   font-size: 20px;
   font-weight: 300;
   color: white;
@@ -244,9 +245,28 @@ header .header-title a {
   margin-top: 30px;
   transition: all 0.3s ease;
 }
-.main-skills .scroll-other .more-about-btn:hover {
+.main-about .scroll-other .more-about-btn:hover {
   border: 1px solid white;
 }
-.main-skills .scroll-appear-other {
+.main-about .scroll-appear-other {
   filter: blur(0px);
+}
+
+.main-about .skill {
+  margin-top: 50px;
+  width: 50vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  align-items: center;
+  gap: 20px;
+}
+.main-about .skill .skill-item p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 100;
+  border: 1px solid #A6A6A6;
+  border-radius: 10px;
+  padding: 10px;
 }/*# sourceMappingURL=main.css.map */

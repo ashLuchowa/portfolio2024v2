@@ -162,14 +162,14 @@ header {
     }
 }
 
-// MYSKILLS
-.main-skills {
+// ABOUT ME
+.main-about {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    align-items: start;
-    background-color: #A6A6A6;
+    height: 80vh;
+    align-items: center;
+    // background-color: #dfdfdf;
     h2 {
         font-size: 60px;
         color: $primary-color;
@@ -183,10 +183,12 @@ header {
         align-items: center;
         p {
             width: 50vw;
-            text-align: center;
-            font-size: 30px;
+            text-align: start;
+            font-size: 25px;
             line-height: 35px;
             font-weight: 300;
+            color: $primary-light-color;
+            margin-top: 20px;
         }
         .more-about-btn {
             font-size: 20px;
@@ -206,5 +208,29 @@ header {
     }
     .scroll-appear-other {
         filter: blur(0px);
+    }
+}
+
+// SKILLS
+.main-about {
+    .skill {
+        margin-top: 50px;
+        width: 50vw;;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        align-items: center;
+        gap: 20px;
+        .skill-item {
+            p {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 20px;
+                font-weight: 100;
+                border: 1px solid $secondary-light-color;
+                border-radius: 10px;
+                padding: 10px;
+            }
+        }
     }
 }
