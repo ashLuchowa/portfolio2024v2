@@ -211,11 +211,12 @@ header .header-title a {
   flex-direction: column;
   height: 80vh;
   align-items: center;
+  justify-content: center;
 }
 .main-about h2 {
-  font-size: 60px;
+  font-size: 25px;
   color: #0D0D0C;
-  font-weight: 100;
+  font-weight: bold;
 }
 .main-about .about-para p {
   width: 50vw;
@@ -224,7 +225,7 @@ header .header-title a {
   line-height: 35px;
   font-weight: 300;
   color: #252626;
-  margin-top: 20px;
+  margin: 30px 0;
 }
 .main-about .scroll-other {
   filter: blur(10px);
@@ -238,7 +239,6 @@ header .header-title a {
   filter: blur(0px);
 }
 .main-about .skill {
-  margin-top: 50px;
   width: 50vw;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -254,4 +254,48 @@ header .header-title a {
   border: 1px solid #A6A6A6;
   border-radius: 10px;
   padding: 10px;
+}
+
+.main-contact {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-contact h2 {
+  font-size: 25px;
+  color: #0D0D0C;
+  font-weight: bold;
+}
+.main-contact .contact-info {
+  display: flex;
+}
+.main-contact .contact-info .contact-email {
+  font-size: 40px;
+  color: #0D0D0C;
+  margin: 30px 0;
+}
+.main-contact .contact-info .contact-email a {
+  text-decoration: none;
+  color: #252626;
+  font-size: 60px;
+  font-weight: 100;
+}
+.main-contact .contact-info .contact-phone a {
+  text-decoration: none;
+  color: #252626;
+  font-size: 25px;
+  font-weight: 100;
+}
+.main-contact .scroll-other {
+  filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: filter 0.7s ease-out;
+}
+.main-contact .scroll-appear-other {
+  filter: blur(0px);
 }/*# sourceMappingURL=main.css.map */
