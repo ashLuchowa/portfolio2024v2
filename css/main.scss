@@ -8,6 +8,10 @@ $secondary-light-color: #A6A6A6;
 $primary-background-color: #F2F2F2;
 
 // GENERAL
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
