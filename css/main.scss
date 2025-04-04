@@ -6,6 +6,16 @@ $primary-color: #0D0D0C;
 $primary-light-color: #252626;
 $secondary-light-color: #A6A6A6;
 $primary-background-color: #F2F2F2;
+// DESKTOP SIZE
+$desktop-primary-h1: 130px;
+$desktop-subheading: 30px;
+$desktop-project-h1: 120px;
+$desktop-project-subheading: 18px;
+$desktop-paragraph: 25px;
+$desktop-social-links: 18px;
+// MOBILE SIZE
+$mobile-primary-h1: 60px;
+$mobile-subheading: 20px;
 
 // GENERAL
 html {
@@ -34,8 +44,7 @@ header {
         right: 0;
         padding: 20px 20px;
         display: grid;
-        grid-template-columns: auto 1fr auto;
-        gap: 20px;
+        grid-template-columns: auto 1fr auto auto;
         box-sizing: border-box;
 
         .header-logo {
@@ -45,7 +54,7 @@ header {
 
             a {
                 text-decoration: none;
-                font-size: 30px;
+                font-size: $desktop-subheading;
                 font-weight: 100;
                 color: $primary-light-color;
             }
@@ -54,6 +63,7 @@ header {
         .square {
             display: flex;
             align-items: center;
+            margin: 0 20px;
 
             .top-hr {
                 width: 100%;
@@ -66,10 +76,9 @@ header {
             display: flex;
             align-items: center;
             gap: 20px;
-
             a {
                 text-decoration: none;
-                font-size: 20px;
+                font-size: $desktop-social-links;
                 font-weight: 100;
                 color: $primary-light-color;
             }
@@ -78,6 +87,41 @@ header {
                 border-right: 1px solid $secondary-light-color;
                 padding: 5px 10px;
             }
+        }
+
+        /* hamburger menu */
+        .hamburger-content {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .bar {
+            height: 3px;
+            width: 20px;
+            background-color: $primary-color;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .hamburger-content.active .bar:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        .hamburger-content.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger-content.active .bar:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+
+        .bar:last-child {
+            margin-bottom: 0px;
         }
     }
 
@@ -88,13 +132,13 @@ header {
         position: fixed;
         bottom: 20px;
         right: 20px;
-        gap: 10px;
+        gap: 25px;
         text-align: end;
 
         .nav-link a {
             text-decoration: none;
             color: $primary-color;
-            font-size: 25px;
+            font-size: $desktop-subheading;
             line-height: 25px;
             font-weight: 100;
         }
@@ -108,14 +152,14 @@ header {
         align-items: start;
 
         h1 {
-            font-size: 9em;
+            font-size: $desktop-primary-h1;
             color: $primary-color;
             font-weight: 100;
             width: 1000px;
         }
 
         a {
-            font-size: 2em;
+            font-size: $desktop-subheading;
             color: $primary-color;
             font-weight: 100;
             margin-top: 20px;
@@ -132,7 +176,7 @@ header {
         align-items: center;
         flex-direction: column;
         position: fixed;
-        bottom: 130px;
+        bottom: 170px;
         right: 20px;
         width: 50px;
         height: 50px;
@@ -186,7 +230,7 @@ header {
             flex-direction: column;
 
             .project-title {
-                font-size: 8em;
+                font-size: $desktop-project-h1;
                 text-decoration: none;
                 color: $primary-color;
                 font-weight: 100;
@@ -201,20 +245,19 @@ header {
                 padding: 0 0 0 15px;
 
                 .project-sub-title {
-                    font-size: 2em;
+                    font-size: $desktop-subheading;
                     text-decoration: none;
                     color: $primary-light-color;
                     font-weight: 100;
                 }
 
                 .project-view-code {
-                    font-size: 1em;
+                    font-size: $desktop-paragraph;
                     text-decoration: none;
                     color: $primary-light-color;
                     border: 1px solid $secondary-light-color;
                     border-radius: 5px;
                     padding: 10px;
-                    text-transform: uppercase;
                 }
             }
         }
@@ -240,7 +283,7 @@ header {
     justify-content: center;
 
     h2 {
-        font-size: 25px;
+        font-size: $desktop-paragraph;
         color: $primary-color;
         font-weight: bold;
     }
@@ -249,7 +292,7 @@ header {
         p {
             width: 50vw;
             text-align: start;
-            font-size: 25px;
+            font-size: $desktop-paragraph;
             line-height: 35px;
             font-weight: 300;
             color: $primary-light-color;
@@ -272,7 +315,6 @@ header {
 
     .skill {
         width: 50vw;
-        ;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         align-items: center;
@@ -302,7 +344,7 @@ header {
     align-items: center;
 
     h2 {
-        font-size: 25px;
+        font-size: $desktop-paragraph;
         color: $primary-color;
         font-weight: bold;
     }
@@ -344,5 +386,108 @@ header {
 
     .scroll-appear-other {
         filter: blur(0px);
+    }
+}
+
+/*--------- MEDIA QUERIES ---------*/
+@media (max-width: 1100px) {
+    header {
+        .header-title {
+            align-items: center;
+
+            h1 {
+                // font-size: $tablet-primary-h1;
+                width: 600px;
+            }
+        }
+    }
+
+    .main-project {
+        padding: 50px;
+
+        .project-title img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+    }
+}
+
+@media (max-width: 680px) {
+    header {
+        .header-title {
+            align-items: center;
+
+            h1 {
+                font-size: $mobile-primary-h1;
+                text-align: center;
+                width: auto;
+            }
+
+            a {
+                font-size: $mobile-subheading;
+            }
+        }
+        .top-info {
+            .header-social {
+                display: none;
+            }
+            .hamburger-content {
+                display: flex;
+            }
+        }
+
+        nav {
+            display: none;
+        }
+
+        .back-top {
+            bottom: 20px;
+        }
+    }
+
+    .main-project {
+        padding: 50px;
+
+        .project-title img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+    }
+
+    .main-about {
+        height: 100vh;
+        margin-top: 100px;
+        .about-para {
+            margin-bottom: 20px;
+        }
+    }
+
+    .main-contact {
+        height: 100vh;
+        .contact-info {
+            .contact-email {
+                font-size: 40px;
+        
+                a {
+                    text-decoration: none;
+                    color: $primary-light-color;
+                    font-size: 30px;
+                    font-weight: 100;
+                }
+            }
+        
+            .contact-phone {
+                a {
+                    text-decoration: none;
+                    color: $primary-light-color;
+                    font-size: 20px;
+                    font-weight: 100;
+                }
+            }
+        }
     }
 }
