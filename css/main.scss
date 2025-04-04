@@ -76,6 +76,7 @@ header {
             display: flex;
             align-items: center;
             gap: 20px;
+
             a {
                 text-decoration: none;
                 font-size: $desktop-social-links;
@@ -209,7 +210,6 @@ header {
         opacity: 0;
     }
 }
-
 
 
 // CONTENT
@@ -429,10 +429,12 @@ header {
                 font-size: $mobile-subheading;
             }
         }
+
         .top-info {
             .header-social {
                 display: none;
             }
+
             .hamburger-content {
                 display: flex;
             }
@@ -456,22 +458,39 @@ header {
             object-fit: cover;
             border-radius: 20px;
         }
+
+        .scroll {
+            .title {
+                .project-title {
+                    font-size: $mobile-primary-h1;
+                    text-align: center;
+                }
+                .sub {
+                    flex-direction: column;
+                }
+            }
+        }
     }
 
     .main-about {
         height: 100vh;
         margin-top: 100px;
+
         .about-para {
             margin-bottom: 20px;
+            p {
+                text-align: center;
+            }
         }
     }
 
     .main-contact {
         height: 100vh;
+
         .contact-info {
             .contact-email {
                 font-size: 40px;
-        
+
                 a {
                     text-decoration: none;
                     color: $primary-light-color;
@@ -479,7 +498,7 @@ header {
                     font-weight: 100;
                 }
             }
-        
+
             .contact-phone {
                 a {
                     text-decoration: none;

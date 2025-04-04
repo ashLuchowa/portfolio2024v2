@@ -419,12 +419,22 @@ header .hidden {
        object-fit: cover;
     border-radius: 20px;
   }
+  .main-project .scroll .title .project-title {
+    font-size: 60px;
+    text-align: center;
+  }
+  .main-project .scroll .title .sub {
+    flex-direction: column;
+  }
   .main-about {
     height: 100vh;
     margin-top: 100px;
   }
   .main-about .about-para {
     margin-bottom: 20px;
+  }
+  .main-about .about-para p {
+    text-align: center;
   }
   .main-contact {
     height: 100vh;
