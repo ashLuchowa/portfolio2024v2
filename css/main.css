@@ -217,15 +217,7 @@ header .header-title a {
   color: #0D0D0C;
   font-weight: 100;
 }
-.main-about .scroll-other {
-  filter: blur(10px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: filter 0.7s ease-out;
-}
-.main-about .scroll-other p {
+.main-about .about-para p {
   width: 50vw;
   text-align: start;
   font-size: 25px;
@@ -234,24 +226,17 @@ header .header-title a {
   color: #252626;
   margin-top: 20px;
 }
-.main-about .scroll-other .more-about-btn {
-  font-size: 20px;
-  font-weight: 300;
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0);
-  border-radius: 40px;
-  padding: 30px;
-  text-decoration: none;
-  margin-top: 30px;
-  transition: all 0.3s ease;
-}
-.main-about .scroll-other .more-about-btn:hover {
-  border: 1px solid white;
+.main-about .scroll-other {
+  filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: filter 0.7s ease-out;
 }
 .main-about .scroll-appear-other {
   filter: blur(0px);
 }
-
 .main-about .skill {
   margin-top: 50px;
   width: 50vw;

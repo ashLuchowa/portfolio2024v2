@@ -169,18 +169,12 @@ header {
     flex-direction: column;
     height: 80vh;
     align-items: center;
-    // background-color: #dfdfdf;
     h2 {
         font-size: 60px;
         color: $primary-color;
         font-weight: 100;
     }
-    .scroll-other {
-        filter: blur(10px);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    .about-para {
         p {
             width: 50vw;
             text-align: start;
@@ -190,29 +184,18 @@ header {
             color: $primary-light-color;
             margin-top: 20px;
         }
-        .more-about-btn {
-            font-size: 20px;
-            font-weight: 300;
-            color: white;
-            border: 1px solid rgba($color: #ffffff, $alpha: 0);
-            border-radius: 40px;
-            padding: 30px;
-            text-decoration: none;
-            margin-top: 30px;
-            transition: all 0.3s ease;
-            &:hover {
-                border: 1px solid rgba($color: #ffffff, $alpha: 1);
-            }
-        }
+    }
+    .scroll-other {
+        filter: blur(10px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         transition: filter 0.7s ease-out;
     }
     .scroll-appear-other {
         filter: blur(0px);
     }
-}
-
-// SKILLS
-.main-about {
     .skill {
         margin-top: 50px;
         width: 50vw;;
