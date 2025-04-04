@@ -64,6 +64,7 @@ header {
   padding: 20px;
   height: 100vh;
   position: relative;
+  /* Back to top */
 }
 header .top-info {
   z-index: 1000;
@@ -150,6 +151,39 @@ header .header-title a {
   padding: 20px;
   text-decoration: none;
   border-bottom: 2px solid #252626;
+}
+header .back-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  bottom: 130px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #252626;
+  filter: 0;
+  border-radius: 60px;
+  z-index: 3;
+  transition: all 0.3s ease;
+  background-color: #252626;
+  text-decoration: none;
+}
+header .back-top:hover {
+  border: 1px solid #252626;
+  background-color: #F2F2F2;
+}
+header .back-top:hover .back-top-content {
+  color: #252626;
+  font-weight: 500;
+}
+header .back-top .back-top-content {
+  color: #F2F2F2;
+  font-weight: 500;
+}
+header .hidden {
+  opacity: 0;
 }
 
 .main-project {

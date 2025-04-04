@@ -5,12 +5,13 @@
 $primary-color: #0D0D0C;
 $primary-light-color: #252626;
 $secondary-light-color: #A6A6A6;
+$primary-background-color: #F2F2F2;
 
 // GENERAL
 body {
     margin: 0;
     padding: 0;
-    background-color: #F2F2F2;
+    background-color: $primary-background-color;
     font-family: 'helvetica';
     font-weight: bold;
 }
@@ -20,6 +21,7 @@ header {
     padding: 20px;
     height: 100vh;
     position: relative;
+
     .top-info {
         z-index: 1000;
         position: fixed;
@@ -31,10 +33,12 @@ header {
         grid-template-columns: auto 1fr auto;
         gap: 20px;
         box-sizing: border-box;
+
         .header-logo {
             display: flex;
             justify-content: center;
             align-items: center;
+
             a {
                 text-decoration: none;
                 font-size: 30px;
@@ -42,31 +46,37 @@ header {
                 color: $primary-light-color;
             }
         }
+
         .square {
             display: flex;
             align-items: center;
+
             .top-hr {
                 width: 100%;
                 height: 1px;
                 background-color: $secondary-light-color;
             }
         }
+
         .header-social {
             display: flex;
             align-items: center;
             gap: 20px;
+
             a {
                 text-decoration: none;
                 font-size: 20px;
                 font-weight: 100;
                 color: $primary-light-color;
             }
+
             .resume {
                 border-right: 1px solid $secondary-light-color;
                 padding: 5px 10px;
             }
         }
     }
+
     nav {
         z-index: 1000;
         display: flex;
@@ -76,6 +86,7 @@ header {
         right: 20px;
         gap: 10px;
         text-align: end;
+
         .nav-link a {
             text-decoration: none;
             color: $primary-color;
@@ -84,18 +95,21 @@ header {
             font-weight: 100;
         }
     }
+
     .header-title {
         display: flex;
         flex-direction: column;
         height: 100vh;
         justify-content: center;
         align-items: start;
+
         h1 {
             font-size: 9em;
             color: $primary-color;
             font-weight: 100;
             width: 1000px;
         }
+
         a {
             font-size: 2em;
             color: $primary-color;
@@ -106,7 +120,49 @@ header {
             border-bottom: 2px solid $primary-light-color;
         }
     }
+
+    /* Back to top */
+    .back-top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: fixed;
+        bottom: 130px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        border: 1px solid $primary-light-color;
+        filter: 0;
+        border-radius: 60px;
+        z-index: 3;
+        transition: all 0.3s ease;
+        background-color: $primary-light-color;
+
+        &:hover {
+            border: 1px solid $primary-light-color;
+            background-color: $primary-background-color;
+
+            .back-top-content {
+                color: $primary-light-color;
+                font-weight: 500;
+            }
+        }
+
+        .back-top-content {
+            color: $primary-background-color;
+            font-weight: 500;
+        }
+
+        text-decoration: none;
+    }
+
+    .hidden {
+        opacity: 0;
+    }
 }
+
+
 
 // CONTENT
 .main-project {
@@ -115,19 +171,23 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+
     .scroll {
         position: absolute;
         filter: blur(10px);
         transition: filter 0.8s ease-in-out;
+
         .title {
             display: flex;
             flex-direction: column;
+
             .project-title {
                 font-size: 8em;
                 text-decoration: none;
                 color: $primary-color;
                 font-weight: 100;
             }
+
             .sub {
                 margin-top: 20px;
                 display: flex;
@@ -135,12 +195,14 @@ header {
                 justify-content: start;
                 gap: 10px;
                 padding: 0 0 0 15px;
+
                 .project-sub-title {
                     font-size: 2em;
                     text-decoration: none;
                     color: $primary-light-color;
                     font-weight: 100;
                 }
+
                 .project-view-code {
                     font-size: 1em;
                     text-decoration: none;
@@ -153,10 +215,12 @@ header {
             }
         }
     }
+
     .project-title img {
         width: 1000px;
         border-radius: 20px;
     }
+
     .scroll-appear {
         filter: blur(0px);
     }
@@ -170,11 +234,13 @@ header {
     height: 80vh;
     align-items: center;
     justify-content: center;
+
     h2 {
         font-size: 25px;
         color: $primary-color;
         font-weight: bold;
     }
+
     .about-para {
         p {
             width: 50vw;
@@ -186,6 +252,7 @@ header {
             margin: 30px 0;
         }
     }
+
     .scroll-other {
         filter: blur(10px);
         display: flex;
@@ -194,15 +261,19 @@ header {
         align-items: center;
         transition: filter 0.7s ease-out;
     }
+
     .scroll-appear-other {
         filter: blur(0px);
     }
+
     .skill {
-        width: 50vw;;
+        width: 50vw;
+        ;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         align-items: center;
         gap: 20px;
+
         .skill-item {
             p {
                 display: flex;
@@ -225,17 +296,21 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     h2 {
         font-size: 25px;
         color: $primary-color;
         font-weight: bold;
     }
+
     .contact-info {
         display: flex;
+
         .contact-email {
             font-size: 40px;
             color: $primary-color;
             margin: 30px 0;
+
             a {
                 text-decoration: none;
                 color: $primary-light-color;
@@ -243,6 +318,7 @@ header {
                 font-weight: 100;
             }
         }
+
         .contact-phone {
             a {
                 text-decoration: none;
@@ -252,6 +328,7 @@ header {
             }
         }
     }
+
     .scroll-other {
         filter: blur(10px);
         display: flex;
@@ -260,6 +337,7 @@ header {
         align-items: center;
         transition: filter 0.7s ease-out;
     }
+
     .scroll-appear-other {
         filter: blur(0px);
     }
