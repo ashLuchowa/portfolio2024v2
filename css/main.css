@@ -93,6 +93,10 @@ header .top-info .header-logo a {
   font-size: 30px;
   font-weight: 100;
   color: #252626;
+  transition: color 0.3s ease;
+}
+header .top-info .header-logo a:hover {
+  color: #9a9a9a;
 }
 header .top-info .square {
   display: flex;
@@ -114,6 +118,10 @@ header .top-info .header-social a {
   font-size: 18px;
   font-weight: 100;
   color: #252626;
+  transition: color 0.3s ease;
+}
+header .top-info .header-social a:hover {
+  color: #9a9a9a;
 }
 header .top-info .header-social .resume {
   border-right: 1px solid #A6A6A6;
@@ -163,6 +171,10 @@ header nav .nav-link a {
   font-size: 30px;
   line-height: 25px;
   font-weight: 100;
+  transition: color 0.3s ease;
+}
+header nav .nav-link a:hover {
+  color: #9a9a9a;
 }
 header .sub-nav {
   z-index: 100;
@@ -211,8 +223,11 @@ header .header-title a {
   font-weight: 100;
   margin-top: 20px;
   padding: 20px;
-  text-decoration: none;
-  border-bottom: 2px solid #252626;
+  text-decoration: underline;
+  transition: color 0.3s ease-out;
+}
+header .header-title a:hover {
+  color: #9a9a9a;
 }
 header .back-top {
   display: flex;
@@ -270,6 +285,9 @@ header .hidden {
   color: #252626;
   font-weight: 100;
 }
+.main-project .scroll .title .project-title:hover {
+  text-decoration: underline;
+}
 .main-project .scroll .title .sub {
   margin-top: 20px;
   display: flex;
@@ -291,6 +309,11 @@ header .hidden {
   border: 1px solid #A6A6A6;
   border-radius: 5px;
   padding: 10px;
+  transition: color 0.3s ease;
+}
+.main-project .scroll .title .sub .project-view-code:hover {
+  color: #F2F2F2;
+  background-color: #252626;
 }
 .main-project .project-title img {
   width: 1000px;
@@ -368,7 +391,7 @@ header .hidden {
 }
 .main-contact .contact-info .contact-email {
   font-size: 40px;
-  color: red;
+  color: black;
   margin: 30px 0;
 }
 .main-contact .contact-info .contact-email a {
@@ -376,12 +399,20 @@ header .hidden {
   color: #252626;
   font-size: 60px;
   font-weight: 100;
+  transition: color 0.3s ease;
+}
+.main-contact .contact-info .contact-email a:hover {
+  color: #9a9a9a;
 }
 .main-contact .contact-info .contact-phone a {
   text-decoration: none;
   color: #252626;
   font-size: 25px;
   font-weight: 100;
+  transition: color 0.3s ease;
+}
+.main-contact .contact-info .contact-phone a:hover {
+  color: #9a9a9a;
 }
 .main-contact .scroll-other {
   filter: blur(10px);
