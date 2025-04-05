@@ -76,7 +76,7 @@ const goToTop = () => {
 
 topBtn.addEventListener('click', goToTop);
 
-// HAMBURGER MENU
+// Hamburger Menu Event Listener
 const button = document.querySelector('.hamburger-content');
 const subNav = document.querySelector('.sub-nav');
 
@@ -85,7 +85,10 @@ button.addEventListener('click', () => {
     button.classList.toggle('active');
 });
 
+
+// Close Mobile Menu after clicking
 const subLinks = document.querySelectorAll('.sub-nav ul li a');
+const headerLogo = document.querySelector('#header a');
 
 subLinks.forEach(item=> {
     item.addEventListener('click', ()=> {
@@ -93,3 +96,9 @@ subLinks.forEach(item=> {
         button.classList.remove('active');
     });
 })
+
+headerLogo.addEventListener('click', ()=> {
+    subNav.classList.remove('active');
+    button.classList.remove('active');
+});
+

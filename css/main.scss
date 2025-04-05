@@ -449,7 +449,7 @@ header {
     }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 900px) {
     header {
         .header-title {
             align-items: center;
@@ -557,6 +557,12 @@ header {
 @media (max-width: 400px) {
     .main-about {
         height: auto;
+    }
+
+    .main-project {
+        .project-title img {
+            height: 300px;
+        }
     }
 
     .main-contact {
