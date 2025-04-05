@@ -28,7 +28,6 @@ body {
     padding: 0;
     background-color: $primary-background-color;
     font-family: 'helvetica';
-    font-weight: bold;
 }
 
 // HEADER
@@ -173,11 +172,16 @@ header {
         height: 100vh;
         width: 100%;
         display: none;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
         opacity: 0;
         transition: all 0.2s ease-in-out;
+
+        #github {
+            margin-top: 50px;
+        }
     }
 
     .sub-nav.active {
@@ -194,6 +198,12 @@ header {
         font-size: 50px;
         font-weight: 100;
         text-decoration: none;
+        .sub-socials {
+            font-size: 30px;
+            span {
+                font-family: 'helvetica';
+            }
+        }
     }
 
     .header-title {

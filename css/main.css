@@ -61,7 +61,6 @@ body {
   padding: 0;
   background-color: #F2F2F2;
   font-family: "helvetica";
-  font-weight: bold;
 }
 
 header {
@@ -185,11 +184,15 @@ header .sub-nav {
   height: 100vh;
   width: 100%;
   display: none;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   opacity: 0;
   transition: all 0.2s ease-in-out;
+}
+header .sub-nav #github {
+  margin-top: 50px;
 }
 header .sub-nav.active {
   right: 0px;
@@ -203,6 +206,12 @@ header .sub-nav ul li a {
   font-size: 50px;
   font-weight: 100;
   text-decoration: none;
+}
+header .sub-nav ul li a .sub-socials {
+  font-size: 30px;
+}
+header .sub-nav ul li a .sub-socials span {
+  font-family: "helvetica";
 }
 header .header-title {
   display: flex;
