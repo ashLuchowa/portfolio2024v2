@@ -283,6 +283,7 @@ header .hidden {
   position: absolute;
   filter: blur(10px);
   transition: filter 0.8s ease-in-out;
+  z-index: 2;
 }
 .main-project .scroll .title {
   display: flex;
@@ -291,7 +292,7 @@ header .hidden {
 .main-project .scroll .title .project-title {
   font-size: 120px;
   text-decoration: none;
-  color: #252626;
+  color: #F2F2F2;
   font-weight: 100;
 }
 .main-project .scroll .title .project-title:hover {
@@ -308,28 +309,34 @@ header .hidden {
 .main-project .scroll .title .sub .project-sub-title {
   font-size: 30px;
   text-decoration: none;
-  color: #252626;
+  color: #F2F2F2;
   font-weight: 100;
 }
 .main-project .scroll .title .sub .project-view-code {
   font-size: 25px;
   text-decoration: none;
-  color: #252626;
-  border: 1px solid #A6A6A6;
+  color: #F2F2F2;
+  border: 1px solid #F2F2F2;
   border-radius: 5px;
   padding: 10px;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 }
 .main-project .scroll .title .sub .project-view-code:hover {
-  color: #F2F2F2;
-  background-color: #252626;
-}
-.main-project .project-title img {
-  width: 1000px;
-  border-radius: 20px;
+  color: #252626;
+  background-color: #F2F2F2;
+  border: 1px solid #F2F2F2;
 }
 .main-project .scroll-appear {
   filter: blur(0px);
+}
+.main-project .project-image {
+  position: relative;
+  z-index: 1;
+}
+.main-project .project-image img {
+  width: 1000px;
+  border-radius: 20px;
+  filter: saturate(40%) brightness(70%);
 }
 
 .main-about {
@@ -533,6 +540,10 @@ header .hidden {
   }
   .main-project .project-title img {
     height: 300px;
+  }
+  .main-project .sub .project-sub-title {
+    text-align: center;
+    margin-bottom: 20px;
   }
   .main-contact {
     height: 100vh;
