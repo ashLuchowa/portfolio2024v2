@@ -59,7 +59,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: #DBD0B7;
+  background-color: #b7dbd9;
   font-family: "helvetica";
 }
 
@@ -260,7 +260,7 @@ header .back-top {
 }
 header .back-top:hover {
   border: 1px solid #252626;
-  background-color: #DBD0B7;
+  background-color: #b7dbd9;
 }
 header .back-top:hover .back-top-content {
   color: #252626;
