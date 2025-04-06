@@ -190,6 +190,7 @@ header .sub-nav {
   text-align: center;
   opacity: 0;
   transition: all 0.2s ease-in-out;
+  visibility: collapse;
 }
 header .sub-nav #github {
   margin-top: 50px;
@@ -197,6 +198,7 @@ header .sub-nav #github {
 header .sub-nav.active {
   right: 0px;
   opacity: 1;
+  visibility: initial;
 }
 header .sub-nav ul li {
   margin: 10px;
@@ -453,12 +455,16 @@ header .hidden {
   .main-project {
     padding: 50px;
   }
-  .main-project .project-title img {
+  .main-project .project-image img {
     width: 100%;
     height: 500px;
     -o-object-fit: cover;
        object-fit: cover;
     border-radius: 20px;
+  }
+  .main-about .about-para p {
+    text-align: center;
+    width: 800px;
   }
 }
 @media (max-width: 900px) {
@@ -541,12 +547,21 @@ header .hidden {
   .main-about {
     height: auto;
   }
-  .main-project .project-title img {
-    height: 300px;
+  .main-project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main-project .scroll .title {
+    background-color: rgba(77, 71, 57, 0.5);
+    padding: 20px 20px;
   }
   .main-project .sub .project-sub-title {
     text-align: center;
     margin-bottom: 20px;
+  }
+  .main-about .about-para p {
+    width: 300px;
   }
   .main-contact {
     height: 100vh;
