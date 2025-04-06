@@ -7,7 +7,7 @@ $primary-light-color: #252626;
 $secondary-light-color: #A6A6A6;
 $primary-white-color: #F2F2F2;
 $primary-background-color: #DBD0B7;
-$primary-hover-color: #9a9a9a;
+$primary-hover-color: #796e51;
 $primary-project-title: $primary-white-color;
 // DESKTOP SIZE
 $desktop-primary-h1: 130px;
@@ -259,7 +259,7 @@ header {
 
         &:hover {
             border: 1px solid $primary-light-color;
-            background-color: $primary-white-color;
+            background-color: $primary-background-color;
 
             .back-top-content {
                 color: $primary-light-color;
