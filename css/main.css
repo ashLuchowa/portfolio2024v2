@@ -59,7 +59,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: #F2F2F2;
+  background-color: #DBD0B7;
   font-family: "helvetica";
 }
 
@@ -491,8 +491,11 @@ header .hidden {
   .main-project {
     padding: 50px;
   }
-  .main-project .project-title img {
+  .main-project .project-image {
     width: 100%;
+  }
+  .main-project .project-image img {
+    width: 300px;
     height: 500px;
     -o-object-fit: cover;
        object-fit: cover;
