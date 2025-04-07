@@ -336,9 +336,15 @@ header .hidden {
   z-index: 1;
 }
 .main-project .project-image img {
+  height: 600px;
   width: 1000px;
   border-radius: 20px;
-  filter: saturate(40%) brightness(70%);
+  filter: saturate(40%) brightness(80%);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main-project #img2 {
+  filter: saturate(40%) brightness(30%);
 }
 
 .main-about {
